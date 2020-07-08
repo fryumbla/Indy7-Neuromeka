@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<robot name="camera" xmlns:xacro="http://ros.org/wiki/xacro">
+
+ <!-- verificar angulo de camera_support -->
+  <link name="camera_support_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="1.570796327 0 0" />
+      <mass
+        value="0.30915" />
+      <inertia
+        ixx="0.00028972"
+        ixy="-5.7879E-10"
+        ixz="-1.8543E-06"
+        iyy="0.00030737"
+        iyz="1.682E-12"
+        izz="0.00019914" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.570796327 0 0.523598" />
+      <geometry>
+        <mesh
+          filename="package://indy7_description/meshes/supports/camera_support.stl" />
+      </geometry>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.570796327 0 0.523598" /> 
+      <geometry>
+        <mesh
+          filename="package://indy7_description/meshes/supports/camera_support.stl" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="indy7_joint_tcp1" type="fixed">
+    <parent link="tcp"/>
+    <child link="camera_support_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.008"/>
+  </joint>
+  
+  <joint name="indy7_joint_camera" type="fixed">
+    <parent link="camera_support_link"/>
+    <child link="coupling_link"/>
+    <origin rpy="0 0 ${PI/2}" xyz="0 0 0"/>
+  </joint>
+
+  <joint name="camera_joint" type="fixed">
+      <origin xyz="0 -0.06 0.095" rpy="0 -1.570796327 1.570796327"/>
+      <parent link="camera_support_link"/>
+      <child link="camera_link"/>
+  </joint>
+  
+  <link name="camera_link">
+    <visual>
+      <origin
+        xyz="-0.023 -0.045 -0.0125"
+        rpy="1.570796327 0 1.570796327" />
+      <geometry>
+        <mesh
+          filename="package://indy7_description/meshes/camera.stl" />
+      </geometry>
+    <material name="metal_grey"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.008 -0.045 -0.0125"
+        rpy="1.570796327 0 1.570796327" /> 
+      <geometry>
+        <mesh
+          filename="package://indy7_description/meshes/camera.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+        <mass value="0.0001" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.0000001" ixy="0" ixz="0" iyy="0.0000001" iyz="0" izz="0.0000001" />
+    </inertial>
+  </link>
+
+</robot>

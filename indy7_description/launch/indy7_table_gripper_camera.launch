@@ -37,11 +37,11 @@
 
 	</group>
 
-	<include file="$(find indy7_table_gripper_cam_moveit)/launch/moveit_planning_execution.launch" >
+	<include file="$(find indy7_table_cam_gri_moveit)/launch/moveit_planning_execution.launch" >
 		<arg name="robot_ip" value="10.201.159.232" />
 		<arg name="robot_name" value="NRMK-Indy7" />
 	</include>
 
-	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find indy7_description)/rviz_config/real_robot.rviz"/>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find indy7_description)/rviz_config/real_robot_table_gripper_camera.rviz"/>
 	
 </launch>
