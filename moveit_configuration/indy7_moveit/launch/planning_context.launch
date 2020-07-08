@@ -6,10 +6,10 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="$(find xacro)/xacro.py '$(find indy7_camera_robotiq_description)/urdf/indy7_camera_robotiq.xacro'"/>
-  
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro --inorder '$(find indy7_description)/urdf/indy7_main.xacro'"/>
+
   <!-- The semantic description that corresponds to the URDF -->
-  <param name="$(arg robot_description)_semantic" textfile="$(find indy7_moveit)/config/indy7_and_robotiq.srdf" />
+  <param name="$(arg robot_description)_semantic" textfile="$(find indy7_moveit)/config/indy7.srdf" />
 
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">
