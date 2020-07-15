@@ -7,6 +7,7 @@ extern "C" {
 #include <std_msgs/Int32.h>
 #include <sensor_msgs/JointState.h>
 
+
 using namespace std;
 
 int clientID;
@@ -30,14 +31,32 @@ void joint_callback(const sensor_msgs::JointState& data)
   pub_msg.name=data.name;
   pub_msg.position = data.position;
 
-  char* joints[6]={"arm_1_joint","arm_2_joint","arm_3_joint","arm_4_joint","arm_5_joint","arm_6_joint"};
-  
-  int joint_handle[6]={0,0,0,0,0,0};
+  char* joints[12]={"joint0","joint1","joint2","joint3","joint4","joint5","finger_joint", "left_inner_knuckle_joint","left_inner_finger_joint", "right_outer_knuckle_joint", "right_inner_knuckle_joint", "right_inner_finger_joint"};
+  // char* joints[12];
 
-  for (int i=0;i<=5; ++i){
+  // for (int i = 0; i < pub_msg.name.size(); i++)
+  // {
+  //   string name=pub_msg.name.at(i);
+  //   std::cout << name << '\n';
+  //   char* cstr= new char[pub_msg.name.size()];
+  //   name.copy(cstr, name.size());
+  //   // cstr[name.size()] = '\0';
+  // 	// strcpy(cstr,name.c_str());
+  //   joints[i]=cstr;
+  //   std::cout << cstr << '\n';
+  // }
+
+  // std::cout << joints[0] << '\n';
+  // std::cout << joints[1] << '\n';
+  // std::cout << joints[2] << '\n';
+  
+
+  int joint_handle[12]={0,0,0,0,0,0,0,0,0,0,0,0};
+
+  for (int i=0;i<=11; ++i){
     joint_handle[i]=found(clientID,joints[i],joint_handle[i],i+1);
   }
-  for (int i=0;i<=5; ++i){
+  for (int i=0;i<=11; ++i){
     simxSetJointTargetPosition(clientID, (simxInt) joint_handle[i], data.position.at(i), simx_opmode_oneshot);
   }
 

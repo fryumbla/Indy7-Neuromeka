@@ -88,7 +88,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://indy7_description/meshes/indy7/Indy7_0.stl"/>
+        <mesh filename="package://indy7_description/meshes/indy7/Indy7_0."/>
       </geometry>
       <material name="metal_white"/>
     </visual>

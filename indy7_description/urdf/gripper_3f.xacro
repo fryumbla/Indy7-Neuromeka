@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <robot name="gripper" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find robotiq_3f_description)/urdf/robotiq-3f-gripper_articulated.xacro"/>
+  <xacro:include filename="$(find robotiq_3f_description)/urdf/robotiq-3f-gripper_articulated.xacro" />
 
  <!-- verificar angulo de support_gripper -->
   <link name="support_gripper_link">
@@ -46,7 +46,7 @@
     <origin rpy="0 0 0" xyz="0 0 0.008"/>
   </joint>
   
-  <joint name="indy7_support_gripper" type="fixed">
+  <joint name="indy7_joint_gripper" type="fixed">
     <parent link="support_gripper_link"/>
     <child link="palm"/>
     <origin rpy="0 0 ${PI/2}" xyz="0 0 0"/>
