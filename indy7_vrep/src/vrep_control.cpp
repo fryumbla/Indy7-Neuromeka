@@ -1,6 +1,4 @@
-extern "C" {
-    #include "/home/francisco/cobots_ws/src/Indy7-Neuromeka/indy7_vrep/remoteApi/extApi.h"
-}
+#include "../remoteApi/extApi.h"
 #include <iostream>
 #include <string>
 #include <ros/ros.h>
