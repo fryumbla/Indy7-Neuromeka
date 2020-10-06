@@ -54,8 +54,8 @@
 
   <!-- end effect point -->
   <joint name="end_effect_point" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0.15"/>
-    <parent link="support_gripper_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.17"/>
+    <parent link="tcp"/>
     <child link="end_effect_point"/>
   </joint>
   <!-- end effect point -->

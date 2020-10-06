@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1.3)
-project(indy7_table_cam_gri_moveit)
+project(indy7_connector_test_moveit)
 
 find_package(catkin REQUIRED)
 

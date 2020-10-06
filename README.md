@@ -34,11 +34,11 @@ Now,Extract the metapackage `Indy7-Neuromeka` into `${ros_workspace}/src`. `catk
 
 ## 2. Structure of Package
 
-* **indy7_description:** This package contains the URDF and XACRO friles for diferents configuration of the robot with grippers.
-* **indy7_gazebo:** This package contains the URDF and XACRO friles for diferents configuration of the robot with grippers.
+* **indy7_description:** This package contains the URDF and XACRO files for a different configuration of the robot with grippers.
+* **indy7_gazebo:** This package contains the URDF and XACRO files for a different configuration of the robot with grippers.
 * **indy7_master:** This pasckage contains a diferrents examples of motion used MoveIt and the joystick&keyboard control of the real robot.
 * **indy7_vrep:** This package contains the communication with V-REP simulator including examples and scenes
-* **indy7_configuration_moveit:** This package contains the diferent MoveIt configuration of diferents configuration of the robot
+* **indy7_configuration_moveit:** This package contains the diferent MoveIt configuration of a different configuration of the robot
 
 
 ## 3. How to Use
@@ -98,11 +98,11 @@ This node publish the joints goals in the topic `/joint_goals` or the joints sta
    rosrun indy7_gazebo communitation_gazebo.py 
    ```
 To see the list of movement, type `rosrun bioloid_gp_master movement.py` program, introduce the number do you want to move `1 2 3` and `Enter`.
-This node publis the joints goals in the topic `/joint_goals`
+This node publishes the joints goals in the topic `/joint_goals`
 
 ### 3.2. Real Robot
 
-The real robot work with the moveit_configuration package for precaution collission in our workspace or enviroment
+The real robot work with the moveit_configuration package for precaution collision in our workspace or environment
 
 Setup the Robot and turn on. 
 
@@ -139,6 +139,8 @@ Setup the Robot and turn on.
     type: FollowJointTrajectory
     joints: [joint0, joint1, joint2, joint3, joint4, joint5]
     en ros_controll.yaml
+
+    
     `roslaunch indy7_description display.launch table:=true gripper:=true camera:=true`
     
     -->

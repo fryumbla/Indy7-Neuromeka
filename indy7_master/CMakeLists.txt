@@ -138,6 +138,9 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/indy7_master_node.cpp)
 add_executable(example src/example.cpp)
+add_executable(homepos src/homepos.cpp)
+add_executable(readpos src/read_pos.cpp)
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -154,6 +157,8 @@ add_executable(example src/example.cpp)
 #   ${catkin_LIBRARIES}
 # )
 target_link_libraries(example ${catkin_LIBRARIES})
+target_link_libraries(homepos ${catkin_LIBRARIES})
+target_link_libraries(readpos ${catkin_LIBRARIES})
 
 #############
 ## Install ##

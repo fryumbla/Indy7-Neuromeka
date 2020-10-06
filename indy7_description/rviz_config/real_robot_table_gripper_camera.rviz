@@ -1,15 +1,16 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 78
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /Global Options1
         - /Status1
+        - /TF1
         - /TF1/Frames1
         - /Camera1/Visibility1
       Splitter Ratio: 0.5600907206535339
-    Tree Height: 183
+    Tree Height: 422
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -558,32 +559,64 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        Connector 1:
+          Value: true
+        Connector 2:
+          Value: true
+        Connector 3:
+          Value: true
+        Connector 4:
+          Value: true
+        Connector 5:
+          Value: true
+        Connector 6:
+          Value: true
+        Connector 7:
+          Value: true
+        Connector 8:
+          Value: true
+        camera_accel_frame:
+          Value: false
+        camera_accel_optical_frame:
+          Value: false
         camera_color_frame:
-          Value: true
+          Value: false
         camera_color_optical_frame:
-          Value: true
+          Value: false
         camera_depth_frame:
-          Value: true
+          Value: false
         camera_depth_optical_frame:
-          Value: true
+          Value: false
+        camera_gyro_frame:
+          Value: false
+        camera_gyro_optical_frame:
+          Value: false
+        camera_infra1_frame:
+          Value: false
+        camera_infra1_optical_frame:
+          Value: false
+        camera_infra2_frame:
+          Value: false
+        camera_infra2_optical_frame:
+          Value: false
         camera_link:
-          Value: true
+          Value: false
         camera_support_link:
-          Value: true
+          Value: false
         coupling_link:
-          Value: true
+          Value: false
         end_effect_point:
-          Value: true
+          Value: false
         ground:
           Value: true
         left_inner_finger:
-          Value: true
+          Value: false
         left_inner_finger_pad:
-          Value: true
+          Value: false
         left_outer_finger:
-          Value: true
+          Value: false
         left_outer_knuckle:
-          Value: true
+          Value: false
         link0:
           Value: false
         link1:
@@ -599,24 +632,24 @@ Visualization Manager:
         link6:
           Value: false
         right_inner_finger:
-          Value: true
+          Value: false
         right_inner_finger_pad:
-          Value: true
+          Value: false
         right_outer_finger:
-          Value: true
+          Value: false
         right_outer_knuckle:
-          Value: true
+          Value: false
         robotiq_arg2f_base_link:
-          Value: true
+          Value: false
         support:
-          Value: true
+          Value: false
         support_gripper_link:
-          Value: true
+          Value: false
         tcp:
           Value: false
         world:
-          Value: true
-      Marker Scale: 0.5
+          Value: false
+      Marker Scale: 0.30000001192092896
       Name: TF
       Show Arrows: true
       Show Axes: true
@@ -635,18 +668,46 @@ Visualization Manager:
                             tcp:
                               camera_support_link:
                                 camera_link:
+                                  camera_accel_frame:
+                                    camera_accel_optical_frame:
+                                      {}
                                   camera_color_frame:
+                                    Connector 1:
+                                      {}
+                                    Connector 2:
+                                      {}
+                                    Connector 3:
+                                      {}
+                                    Connector 4:
+                                      {}
+                                    Connector 5:
+                                      {}
+                                    Connector 6:
+                                      {}
+                                    Connector 7:
+                                      {}
+                                    Connector 8:
+                                      {}
                                     camera_color_optical_frame:
                                       {}
                                   camera_depth_frame:
                                     camera_depth_optical_frame:
                                       {}
+                                  camera_gyro_frame:
+                                    camera_gyro_optical_frame:
+                                      {}
+                                  camera_infra1_frame:
+                                    camera_infra1_optical_frame:
+                                      {}
+                                  camera_infra2_frame:
+                                    camera_infra2_optical_frame:
+                                      {}
+                              end_effect_point:
+                                {}
                               support_gripper_link:
                                 coupling_link:
                                   robotiq_arg2f_base_link:
                                     {}
-                                end_effect_point:
-                                  {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -725,39 +786,39 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.1562533378601074
+      Distance: 1.3848880529403687
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.5327056646347046
-        Y: -0.43621137738227844
-        Z: 0.6645910739898682
+        X: -0.3243612051010132
+        Y: -0.12594348192214966
+        Z: 0.6503373980522156
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4353981018066406
+      Pitch: 0.8347969651222229
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.680448532104492
+      Yaw: 4.715452194213867
     Saved: ~
 Window Geometry:
   Camera:
     collapsed: false
   Displays:
     collapsed: false
-  Height: 1025
+  Height: 1052
   Hide Left Dock: false
   Hide Right Dock: false
   MotionPlanning:
     collapsed: false
-  MotionPlanning - Slider:
+  MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000029500000363fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000142000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001850000021b0000019b00ffffff000000010000010f00000363fc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000001a1000000a400fffffffb0000000c00430061006d00650072006101000001e4000001bc0000001600fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073d0000003efc0100000002fb0000000800540069006d006501000000000000073d000002eb00fffffffb0000000800540069006d006501000000000000045000000000000000000000038d0000036300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000002950000037efc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed0000043800000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000001e3000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000226000001950000018900fffffffb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100ffffff00000001000001af0000037efc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d000000a4000000a400fffffffb0000000c00430061006d006500720061010000003d0000037e0000001600fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007800000003efc0100000002fb0000000800540069006d0065010000000000000780000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000003300000037e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -766,6 +827,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1853
-  X: 67
-  Y: 27
+  Width: 1920
+  X: 972
+  Y: 0
