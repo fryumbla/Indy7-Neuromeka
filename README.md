@@ -107,7 +107,7 @@ The real robot work with the moveit_configuration package for precaution collisi
 
 Setup the Robot and turn on. 
 
-2. Launch the robot
+1. Launch the robot
    ```
    roslaunch indy7_description real_robot.launch robot:=true
    ```
@@ -116,6 +116,14 @@ Setup the Robot and turn on.
    roslaunch indy7_description real_robot.launch gripper_2f:=true
    ```
 
+2. Example programs 
+   ```
+   rosrun indy7_master example_joint
+   ```
+   rosrun indy7_master example_position
+   ```
+   rosrun indy7_master readpos
+   ```
 
 
 <!-- moveit
