@@ -21,7 +21,7 @@ int main(int argc, char **argv)
   // start programing
 
   geometry_msgs::Pose current_pose;
-  current_pose = group.getCurrentPose("camera_link").pose;
+  current_pose = group.getCurrentPose("tcp").pose;
   std::cout << std::endl << "CUrrent Pose End Effector" << std::endl;
   std::cout << "X: " << current_pose.position.x << std::endl;
   std::cout << "Y: " << current_pose.position.y << std::endl;

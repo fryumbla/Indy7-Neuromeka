@@ -26,6 +26,7 @@ There are a number of dependencies in this package, since the ABB robot is opera
 * ros-melodic-abb
 * ros-melodic-moveit
 * ros-melodic-joint-trajectory-controller
+* ros-melodic-joint-state-publisher-gui
 
 Now,Extract the metapackage `Indy7-Neuromeka` into `${ros_workspace}/src`. `catkin_make` your workspace.
 
@@ -60,7 +61,7 @@ Open terminal and `roscore` and `Enter`.
 
 2. Launch the robot with Moveit configuration
    ```
-   roslaunch indy7_description indy7_moveit.launch
+   roslaunch indy7_description indy7_moveit.launch robot:=true
    ```
    If you need see other configuration you can space and include **gripper_2f:=true** or **gripper_3f:=true**
    ```
@@ -76,7 +77,7 @@ Open terminal and `roscore` and `Enter`.
 
 3. Run the next node for the communication Vrep to ros
    ```
-   rosrun indy7_vrep comunication
+   rosrun indy7_vrep communication
    ```
 4. You can control with publish direct the Jointstates or generate other but you need change the subscribe in the **vrep_control.cpp** file
 

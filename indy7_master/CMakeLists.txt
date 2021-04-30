@@ -137,8 +137,8 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/indy7_master_node.cpp)
-add_executable(example src/example.cpp)
-add_executable(homepos src/homepos.cpp)
+add_executable(example_joint src/example_joint.cpp)
+add_executable(example_position src/example_position.cpp)
 add_executable(readpos src/read_pos.cpp)
 
 
@@ -156,8 +156,8 @@ add_executable(readpos src/read_pos.cpp)
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-target_link_libraries(example ${catkin_LIBRARIES})
-target_link_libraries(homepos ${catkin_LIBRARIES})
+target_link_libraries(example_joint ${catkin_LIBRARIES})
+target_link_libraries(example_position ${catkin_LIBRARIES})
 target_link_libraries(readpos ${catkin_LIBRARIES})
 
 #############
