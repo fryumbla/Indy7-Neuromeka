@@ -4,10 +4,12 @@
 	<arg name="gripper_2f" default="false" />
 	<arg name="gripper_3f" default="false" />
 	<arg name="camera" default="false" />
+	<arg name="conveyor" default="false" />
 
 	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find indy7_description)/urdf/indy7_main.xacro 
 			table:=$(arg table) 
 			camera:=$(arg camera)
+			conveyor:=$(arg conveyor)
 			gripper_2f:=$(arg gripper_2f)
 			gripper_3f:=$(arg gripper_3f)"/>
 	

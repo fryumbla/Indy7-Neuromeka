@@ -6,7 +6,7 @@
   <xacro:arg name="camera" default="false"/>
   <xacro:arg name="gripper_2f" default="false"/>
   <xacro:arg name="gripper_3f" default="false"/>
-
+  <xacro:arg name="conveyor" default="false"/>
   
 
   <xacro:include filename="$(find indy7_description)/urdf/indy7.xacro"/>
@@ -14,6 +14,11 @@
   <!-- table -->
   <xacro:if value="$(arg table)">
     <xacro:include filename="$(find indy7_description)/urdf/table.xacro"/>
+  </xacro:if>
+
+  <!-- table -->
+  <xacro:if value="$(arg conveyor)">
+    <xacro:include filename="$(find conveyor_gripper_description)/urdf/conveyor_gripper.xacro"/>
   </xacro:if>
   
   <!-- camera -->
