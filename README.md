@@ -54,7 +54,7 @@ Open terminal and `roscore` and `Enter`.
    ```
    roslaunch indy7_description indy7_display.launch
    ```
-   If you need see other configuration you can space and include **gripper_2f:=true** or **gripper_3f:=true**
+   If you need see other configuration you can space and include **conveyor:=true**, **gripper_2f:=true** or **gripper_3f:=true**
    ```
    roslaunch indy7_description indy7_display.launch gripper_2f:=true
    ```
@@ -63,7 +63,7 @@ Open terminal and `roscore` and `Enter`.
    ```
    roslaunch indy7_description indy7_moveit.launch robot:=true
    ```
-   If you need see other configuration you can space and include **gripper_2f:=true** or **gripper_3f:=true**
+   If you need see other configuration you can space and include **conveyor:=true**, **gripper_2f:=true** or **gripper_3f:=true**
    ```
    roslaunch indy7_description indy7_moveit.launch gripper_3f:=true
    ```
